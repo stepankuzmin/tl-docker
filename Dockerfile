@@ -1,7 +1,7 @@
 FROM node:4
 LABEL maintainer="Stepan Kuzmin <to.stepan.kuzmin@gmail.com>"
 
-RUN npm i -g \
+RUN npm i \
   tl \
   mbtiles \
   tilejson \
@@ -10,4 +10,4 @@ RUN npm i -g \
   tilelive-tmstyle \
   tilelive-vector
 
-CMD [ "tl", "copy" ]
+CMD [ "./node_modules/.bin/tl ", "copy" ]
